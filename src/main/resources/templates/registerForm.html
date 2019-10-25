@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <title>注册</title>
+	<style>
+		div{
+		 text-align:center;
+		 padding: 5px;
+		}
+	</style>
+</head>
+
+<body>  
+	<!-- 设置div标签水平居中  -->
+	<div class="register">
+		<div class="register-head">
+			<h2 class="register-title">请创建你的账户</h2>
+			<h5><font color="red" th:text="${errorMessage}"></font></h5>
+			<h5><font color="green" th:text="${succeedMessage}"></font></h5>
+		</div>
+		<div class="register-body">
+			<form  action="/register"  method="post" role="form">
+			<fieldset>
+				<div class="form">
+				<!-- 一个输入框,框内默认内容为"用户名" -->
+				<input class="form-name" 
+				placeholder="用户名" name="name" type="text" autofocus>
+				</div>                        
+				<div class="form">
+					<input class="form-password"
+					placeholder="密码" name="password" type="password" value="">
+				</div>                                    
+					<input type="submit" value="注册" class="btn" /> 
+			</fieldset>
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>

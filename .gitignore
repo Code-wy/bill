@@ -7,6 +7,22 @@
 # BlueJ files
 *.ctxt
 
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 

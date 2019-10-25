@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <style>
+		div{
+		 text-align:center;
+		 padding: 5px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div>
+		<h1>登陆</h1>
+		<form method="post" action="/login">
+    		<div class="form">
+				<input class="form-name" 
+				placeholder="用户名" name="username" type="text" autofocus>
+			</div>                        
+			<div class="form">
+				<input class="form-password"
+				placeholder="密码" name="password" type="password" value="">
+			</div>                                    
+			<input type="submit" value="登录" class="btn" /> 
+		</form>
+	</div>
+
+</body>
+</html>

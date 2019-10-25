@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>hello</title>
+    <meta charset=UTF-8/>
+    <style>
+		div{
+		 text-align:center;
+		 padding: 5px;
+		}
+		
+	</style>
+</head>
+<body>
+	<h4><a th:href="@{/}">返回首页</a></h4>
+	
+	<div><h3 th:if="${accounts.size()} eq 0">还没有账单，请添加账单呀！</h3>
+    </div>
+	<div  th:unless="${accounts.size()} eq 0">
+	<h2>账 单</h2>
+    <table align='center' border='1' cellspacing='0'>
+        <tr>
+            <td>账单名字</td>
+            <td>账单详情</td>
+            <td> 编辑 </td>
+            <td> 删除 </td>
+        </tr>
+        <tr th:each="b:${accounts}">
+        	
+            <td th:text="${b.billName}"></td>
+            <td th:text="${b.billText}"></td>
+            <!-- <td th:text="${b.date}"></td> -->
+            <td><a th:href="@{/user/edit(id=${b.billId})}">编辑</a></td>
+            <td><a th:href="@{/user/delete(id=${b.billId})}">删除</a></td>
+        </tr>
+    </table>
+	</div>
+
+
+	<div>
+		<h2>添加账单</h2>
+		<form th:action="@{/user/insert}" method="post">
+        	<div>
+            	<label>账单名字</label>
+            	<input type="text" name="billName"/>
+        	</div>
+        	<div>
+            	<label>账单详情</label>
+            	<input type="text" name="billText" />
+        	</div>
+        	<div>
+            	<input type="submit" value="提交" />
+        	</div>
+    </form>
+    </div>
+
+</body>
+</html>
