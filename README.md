@@ -71,13 +71,13 @@ spring.datasource.password=你的密码
 |   |   |   `-- com
 |   |   |       `-- Spring
 |   |   |           `-- bill
-|   |   |               |-- BillApplication.java      ------spring boot项目启动类
+|   |   |               |-- BillApplication.java     ------spring boot项目启动类
 |   |   |               |-- example					  ------项目实列，即项目增删改查的主模块
 |   |   |               |   |-- Bill.java
 |   |   |               |   |-- BillController.java
 |   |   |               |   |-- BillMapper.java
 |   |   |               |   `-- BillService.java
-|   |   |               |-- login                     ------用户登陆校验模块SpringSecurity
+|   |   |               |-- login                    ------用户登陆校验模块SpringSecurity
 |   |   |               |   |-- CustomUserDetailsService.java
 |   |   |               |   |-- Role.java
 |   |   |               |   |-- SpringSecurityConf.java
@@ -87,7 +87,7 @@ spring.datasource.password=你的密码
 |   |   |               |   |-- UserRole.java
 |   |   |               |   |-- UserService.java
 |   |   |               |   `-- test.java
-|   |   |               `-- register				  ------用户注册模块
+|   |   |               `-- register				 ------用户注册模块
 |   |   |                   |-- RegisterController.java
 |   |   |                   |-- RegisterMapper.java
 |   |   |                   `-- RegisterService.java
@@ -106,12 +106,7 @@ spring.datasource.password=你的密码
 |   |           |-- login.html
 |   |           |-- registerForm.html
 |   |           `-- test.html
-|   `-- test			------测试模块，还没有写....
-|       `-- java
-|           `-- com
-|               `-- Spring
-|                   `-- bill
-|                       `-- BillApplicationTests.java
+|   `-- test			------测试模块....
 
 
 ```
